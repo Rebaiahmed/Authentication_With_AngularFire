@@ -1,0 +1,27 @@
+<div class="container animated fadeIn">
+    <div class="jumbotron" style="padding-bottom:0px;">
+        <h2>AngularJS & Firebase App!</h2>
+    </div>
+    <form ng-submit="signup()">
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">UserName</label>
+            <input type="text" class="form-control" placeholder="Username" ng-model="newUser.username" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" ng-model="newUser.email" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="newUser.password" required>
+        </div>
+
+
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+    <div class="alert alert-danger" role="alert" ng-if="error">
+        <span>{{ error.code }}</span>
+    </div>
+</div>
